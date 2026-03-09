@@ -10,7 +10,7 @@ def home():
 def run():
     # Render assigns a random port, but defaults to 10000. 
     # 0.0.0.0 makes it accessible to the outside world.
-    app.run(host='0.0.0.0', port=10000)
+    app.run(host='0.0.0.0', port=7860)
 
 def keep_alive():
     t = Thread(target=run)
