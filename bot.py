@@ -55,6 +55,7 @@ def main():
     application = (
         Application.builder()
         .token(BOT_TOKEN)
+        .base_url("tg-proxy.zakeyusa.workers.dev/bot")
         .concurrent_updates(True)  # 🔥 关键：启用并发处理多个命令
         .build()
     )
