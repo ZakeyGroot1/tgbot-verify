@@ -5,7 +5,7 @@ from functools import partial
 from telegram.ext import Application, CommandHandler
 
 from config import BOT_TOKEN
-from keep_alive import keep_alive
+from keep_alive import keep_alive  # 🔥 Imports the dummy web server
 from database_mysql import Database
 from handlers.user_commands import (
     start_command,
@@ -88,6 +88,11 @@ def main():
     application.add_error_handler(error_handler)
 
     logger.info("机器人启动中...")
+    
+    # 🔥 Start the dummy web server for Render
+    keep_alive()
+    
+    # Start the bot
     application.run_polling(drop_pending_updates=True)
 
 
